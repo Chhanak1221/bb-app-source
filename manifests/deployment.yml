@@ -24,15 +24,15 @@ spec:
     spec:
       containers:
         - name: app
-          image: docker.io/sahera1987143/block-buster-dev:7.8.0 
+          image: 'docker.io/chhanak1221/block-buster-dev:7.8.0'
           imagePullPolicy: Always
           resources:
             requests:
-              memory: "10Mi"
-              cpu: "10m"
+              memory: 10Mi
+              cpu: 10m
             limits:
-              memory: "64Mi"
-              cpu: "20m"
+              memory: 64Mi
+              cpu: 20m
           env:
             - name: MY_POD_NAME
               valueFrom:
@@ -50,3 +50,4 @@ spec:
               valueFrom:
                 fieldRef:
                   fieldPath: spec.nodeName
+
